@@ -10,7 +10,7 @@ app.set('view engine', 'handlebars');
 app.set('port', process.env.PORT || 3000);
 
 app.get('/', function(req,res){
-    res.render('home');
+    res.render('blogger');
 });
 
 app.get('/home', function(req,res){
@@ -21,9 +21,13 @@ app.get('/game', function(req,res){
     res.render('game');
 });
 
+/* app.get('/map', function(req,res){
+    res.render('map');
+}); */
+
 app.get('/login', function(req,res){
     res.render('login');
-})
+});
 
 app.use(express.static(__dirname + "/public"));
 
