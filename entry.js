@@ -13,8 +13,12 @@ app.get('/', function(req,res){
     res.render('home');
 });
 
-app.get('/about', function(req,res){
-    res.render('about');
+app.get('/home', function(req,res){
+    res.render('home');
+})
+
+app.get('/game', function(req,res){
+    res.render('game');
 });
 
 app.get('/login', function(req,res){
