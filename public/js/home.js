@@ -6,7 +6,7 @@ function START(){
     btnHome.addEventListener("click", homeBtn);
 
     function homeBtn(){
-        alert('Hello world')
+        alert("hello user");
     }
 
 }

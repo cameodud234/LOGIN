@@ -31,7 +31,7 @@ function START(){
     const buttonSub = document.getElementById("formSub");
     const userP = document.getElementById("uN");
     const pwP = document.getElementById("pN");
-    const divBox = document.getElementById("myImage");
+    //const divBox = document.getElementById("myImage");
     const uNText = "Username";
     const pWText = "Password";
     const selectTxt = "select";
@@ -89,7 +89,7 @@ function START(){
     });
 
     userElem.addEventListener("focus", function(){
-        if( userElem.value == uNText){
+        if( userElem.value === uNText){
             userElem.value = "";
         }
     });
@@ -144,7 +144,7 @@ function START(){
         if(checkElem.checked){
             // This is where we will change the action of the button
             if( (countryCheck === true) && (stateCheck === true) &&
-            (userTruth = true) && (pwTruth === true) ){
+            (userTruth === true) && (pwTruth === true) ){
                 buttonSub.disabled = false;
             }
         }
