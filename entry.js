@@ -9,6 +9,11 @@ app.set('view engine', 'handlebars');
 
 app.set('port', process.env.PORT || 3000);
 
+
+
+/**********************************************************/
+// Get Block
+
 app.get('/', function(req,res){
     res.render('blogger');
 });
@@ -21,6 +26,10 @@ app.get('/game', function(req,res){
     res.render('game');
 });
 
+app.get('/contact', function(req,res){
+    res.render('contact');
+});
+
 /* app.get('/map', function(req,res){
     res.render('map');
 }); */
@@ -28,6 +37,9 @@ app.get('/game', function(req,res){
 app.get('/login', function(req,res){
     res.render('login');
 });
+
+
+/**********************************************************/
 
 app.use(express.static(__dirname + "/public"));
 
@@ -43,7 +55,7 @@ app.use(function(err,req,res,next){
     res.render('404');
 });
 
-app.listen(app.get('port'), function(){
+app.listen(app.get('port'), '0.0.0.0', function(){
     console.log("Server started on port " +
         app.get('port') + "...");
 })

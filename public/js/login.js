@@ -19,7 +19,9 @@ window.addEventListener("load", START);
 
 
 // function to load on starting the webpage
-function START(e){
+function START(){
+
+    console.log("Show this when login page loads...");
 
     const countryElem = document.getElementById("country");
     const stateElem = document.getElementById("state");
@@ -44,6 +46,7 @@ function START(e){
 
     // disable button
     buttonSub.disabled = true;
+    
 
     countryElem.addEventListener("change", function(){
         if(countryElem.value){
